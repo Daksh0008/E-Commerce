@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RedStore | Ecommerce Website Design</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" herf="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+    <script src="store.js" async></script>
+<style>
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+body{
+font-family: 'Poppins', sans-serif;
+}
+.navbar{
+     display: flex;
+align-items: center;
+padding: 20px;
+}
+ nav{
+flex: 1;
+text-align: right;
+ }
+nav ul li{
+display: inline-block;
+margin-right: 20px;
+}
+a{
+text-decoration: none;
+color: #555;
+}
+p{
+color: #555;
+}
+.container{
+max-width: 1300px;
+margin: auto;
+padding-left: 100px;
+padding-right: 100px;
+        }
+.row{
+display: flex;
+align-items: center;
+flex flex-wrap: wrap;
+justify-content: space-around;
+}
+.col-2{
+flex-basis: 50%;
+min-width: 300px;
+}
+.col-2 img{
+max-width: 93%;
+max-height: inherit;
+padding: 10px 0;
+margin-bottom: 30px;
+}
+.col-2 h1{
+font-size: 50px;
+line-height: 60px;
+margin: 25px 0;
+}
+.btn{
+display: inline-block;
+background: #ff523b;
+color: #fff;
+padding: 8px 30px;
+margin: 30px 0;
+border-radius:40px; 
+cursor: pointer;
+transition: background 0.5s;
+}
+.btn:hover{
+background: #563434;
+}
+.header{
+background: radial-gradient(#fff,#ffd6d6);
+}
+.header .row{
+margin-top: 70px;
+}
+.categories{
+margin-top: 70px 0;   
+}
+.col-3{
+flex-basis: 30%;
+min-width: 250px;
+margin-bottom: 30px;
+}
+.col-3 img{
+width: 100%
+}
+.small-container{
+max-width: 1080px;
+margin: auto;
+padding-left: 25px;
+padding-right: 25px;
+}
+.col-4{
+flex-basis: 30%;
+min-width: 250px;
+margin-bottom: 30px;
+padding: 10px;
+transition: transform 0.5s;
+}
+.col-4 img{
+ width: 100%;
+}
+.title{
+text-align: center;
+margin: 0 auto 80px;
+position: relative;
+line-height: 60px;
+color: #555;
+}
+    .title:after{
+        content: '';
+        background: #ff523b;
+        width: 80px;
+        height: 5px;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    h4{
+        color:#555;
+        font-weight: normal;
+    }
+    .col-4 p{
+        font-size: 14px;
+    }
+    .col-4:hover{
+        transform: translateY(-25px);
+    }
+    /*------offer--------*/
+    .offer{
+        background: radial-gradient(#fff,#ffd6d6);
+            margin-top: 80px;
+        padding: 30px 0;
+    }
+    .col-2 .offer-img{
+        padding: 50px;
+    }
+    small{
+        color: #555;
+    }
+    /*--------testimonial--------*/
+    
+    .testimonial{
+        padding-top: 100px;
+    }
+    .testimonial col-3{
+        text-align: center;
+        padding: 40px 20px;
+        box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+            cursor: pointer; 
+        transition: 0.5s;
+    }
+    .testimonial .col-3 img{
+        width: 50px;
+        margin-top: 20px;
+        border border-radius: 50%;
+    }
+    .testimonial col-3:hover{
+        transform: translateY(-25px);
+    }
+    .fa.fa-quote-left{
+        font-size: 34px;
+        color: #ff523b;
+    }
+    .col-3 p{
+        font-size: 12px;
+        margin: 12px 0;
+        color: #777;
+    }
+    .testimonial col-3 h3{
+        font-weight: 600;
+        color:#555;
+        font-size: 16px;
+    }
+    /*--------brands--------*/
+    .brands{
+        margin: 100px auto;
+    }
+    .col-5{
+        width: 160px;
+    }
+    .col-5 img{
+        width: 100%;
+            cursor: pointer;
+        filter: grayscale(100%);
+    }
+    .col-5 img:hover{
+        filter: grayscale(0);
+    }
+    /*--------footer--------*/
+    .footer{
+        background: #000;
+        color: #8a8a8a;
+        font-size: 14px;
+        padding: 60px 0 50px;
+        text-align: center;
+    }
+    .footer p{
+        color:#8a8a8a;
+    }
+    .footer h3{
+        color: #fff;
+        margin-bottom: 20px;
+    }
+    .footer col-1, footer col-2, footer col-3, footer col-4{
+        min-width: 250px;
+        margin margin-bottom: 20px;
+    }
+    .footer col-1{
+        flex-basis: 30%;
+    }
+    .footer col-2{
+        flex: 1;
+        text-align: center;
+    }
+    .footer col-2 img{
+    width: 180px;
+        margin-bottom: 20px;
+    }
+    .footer col-3, footer col-5{
+        flex-basis: 0;
+        text-align: center;
+    }
+    .app-logo{
+        margin-top: 20px;
+    }
+    .app-logo img{
+        width: 140px;
+    }
+    .footer hr{
+        border: none;
+        background: #b5b5b5;
+        height: 1px;
+        margin: 20px 0;
+    }
+    .Copyright{
+        text-align: center;
+    }
+    .menu-icon{
+        width: 28px;
+        margin-left: 20px;
+        display: none;
+    }
+    /*------------media query for menu----------*/
+    
+    @media only screen and (max-width: 800px){
+        nav ul{
+            position: absolute;
+            top: 70px;
+            left: 0;
+            background: #333;
+            width: 100%;
+            overflow: hidden;
+            transition: max-height 0.5s;
+        }
+        nav ul li{
+            display: block;
+            margin-right: 50px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        nav ul li a{
+            color: #fff
+        }
+        .menu-icon{
+            display: block;
+            cursor:pointer;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="header">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+            <a href="Home.html"><img src="images/logo.png" width="125px"></a>
+        </div>
+        <nav>
+            <ul id="MenuItems">
+                 <li><a href="Home.html">Home</a></li>
+                 <li><a href="Products.html">Products</a></li>
+                 <li><a href="About.html">About</a></li>
+                 <li><a href="Contact.html">Contact</a></li>
+                <li><a href="account.html">Account</a></li>            
+            </ul>
+        </nav>
+         <a href="Cart.html"><img src="images/cart.png" width="30px" height="30px"></a> 
+          <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+    </div>
+        <div class="row">
+            <div class="col-2">
+            <h1>Give Your Workout<br> A New Style!</h1>
+<p>Success isn't always about greatness. It's about consistency. Consistent<br> hard work gains success. Greatness will come.</p>
+                <a href="Products.html"class="btn">Explore Now &#8594;</a>
+            </div>
+            <div class="col-2">
+             <img src="images/image1.png">
+            </div>
+
+            
+        </div>
+    </div>
+    </div>
+    
+    <!-------- featured categories ---------->
+    
+    <div class="categories">
+        <div class="small-container">
+             <h2>Featured Categories</h2>
+         <div class="row">
+        <div class="col-3">
+        <img src="images/category-1.jpg">
+        </div>
+        <div class="col-3">
+        <img src="images/category-2.jpg">
+        </div>
+        <div class="col-3">
+        <img src="images/category-3.jpg">
+        </div>
+        </div>
+        </div>
+   
+    </div>
+    
+     <!-------- featured products ---------->
+    <div class="small-container">
+    <h2 class="title">Featured Products</h2>
+      <div class="row">
+        <div class="col-4">
+            <a href="Product-detail.html"><img src="images/product-1.jpg"></a>
+            <a href="Product-detail.html"><h4>Red Printed T-Shirt</h4></a>
+            <p>₹3,700</p>
+            </div>
+           <div class="col-4">
+               <a href="Product-detail%202.html"><img src="images/product-2.jpg"></a>
+               <a href="Product-detail2.html"><h4>Black Sports Shoes</h4></a>
+            <p>₹2,500</p>
+            </div>
+           <div class="col-4">
+               <a href="Product-detail%202.html"><img src="images/product-3.jpg"></a>
+            <a href="Product-detail%202.html"><h4>Grey Trousers Men's</h4></a>
+            <p>₹4,000</p>
+            </div>
+         <div class="col-4">
+             <a href="Product-detail%204.HTML"><img src="images/product-4.jpg"></a>
+             <a href="Product-detail%204.HTML"><h4>Blue T-Shirt</h4></a>
+            <p>₹3,000</p>
+          </div>
+          </div>
+         <h2 class="title">Latest Products</h2>
+         <div class="row">
+        <div class="col-4">
+            <a href="Product-detail%205.html"><img src="images/product-5.jpg"></a>
+            <a href="Product-detail%205.html"><h4>Hiking Boots Mens's</h4></a>
+            <p>₹1,500</p>
+            </div>
+           <div class="col-4">
+               <a href="Product-detail%206.html"><img src="images/product-6.jpg"></a>
+            <h4>Black Printed T-Shirt</h4>
+            <p>₹1,100</p>
+            </div>
+           <div class="col-4">
+               <a href="Product-detail%207.html"><img src="images/product-7.jpg"></a>
+            <h4>HRX Socks</h4>
+            <p>₹300</p>
+            </div>
+         <div class="col-4">
+             <a href="Product-detail%208.html"><img src="images/product-8.jpg"></a>
+            <h4>Black Fossial Watch</h4>
+            <p>₹13,000</p>
+          </div>
+          </div>
+         <div class="row">
+        <div class="col-4">
+            <a href="Product-detail%209.html"><img src="images/product-9.jpg"></a>
+            <h4>Black Roadster Watch</h4>
+            <p>₹1,000</p>
+            </div>
+           <div class="col-4">
+               <a href="Product-detail%2010.html"><img src="images/product-10.jpg"></a>
+            <h4>HRX Sports Shoes</h4>
+            <p>₹1,500</p>
+            </div>
+           <div class="col-4">
+               <a href="Product-detail%2011.html"><img src="images/product-11.jpg"></a>
+            <h4>Skechers Grey Shoes Men's</h4>
+            <p>₹2,300</p>
+            </div>
+         <div class="col-4">
+          <a href="Product-detail%2012.html"><img src="images/product-12.jpg"> 
+            <h4>BlackTrousers Men's</h4>
+            <p>₹3,700</p>
+          </div>
+          </div>
+    </div>
+    <!------offer------>
+    <div class="offer">
+    <div class="small-container">
+        <div class="row">
+        <div class="col-2">
+            <img src="images/exclusive.png" class="offer-img" width="350px" height="306.5px">
+            </div>
+        <div class="col-2">
+            <p>Exclusively Available on RedStore</p>
+            <h1>Smart Band 4</h1>
+            <small>The Mi Smart Band features a 39.9% larger (than Mi Band 3) AMOLED color full-tuch display with adjustable brightness, So everything is clear as can be.</small>
+            <a href="Product-detail%20band%204.html" class="btn">BuyNow &#8594;</a>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    <!--------testimonial--------> 
+    <div class="testimonial">
+    <div class="small-container">
+        <div class="row">
+        <div class="col-3">
+            <i class="fa fa-qute-left"></i>
+            <p>Lorem Ipsum is simply dummy tex of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+            <img src="images/user-1.png">
+            <h3>Sean Parker</h3>
+            </div>
+             <div class="col-3">
+            <i class="fa fa-qute-left"></i>
+            <p>Lorem Ipsum is simply dummy tex of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+            <img src="images/user-2.png">
+            <h3>Mike Smith</h3>
+            </div>
+             <div class="col-3">
+            <i class="fa fa-qute-left"></i>
+            <p>Lorem Ipsum is simply dummy tex of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+            <img src="images/user-3.png">
+            <h3>Mable Joe</h3>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!--------brands-------->
+    <div class="brands">
+    <div class="small-container">
+        
+        <div class="row">
+        <div class="col-5">
+            <img src="images/logo-godrej.png">
+            </div>
+            <div class="col-5">
+            <img src="images/logo-oppo.png">
+            </div>
+            <div class="col-5">
+            <img src="images/logo-coca-cola.png">
+            </div>
+            <div class="col-5">
+            <img src="images/logo-paypal.png">
+            </div>
+            <div class="col-5">
+            <img src="images/logo-philips.png">
+            </div>
+        </div>
+        </div>
+     </div>
+    
+    <!--------footer-------->
+    <div class="footer">
+    <div class="small-containers">
+        
+        <div class="row">
+        <div class="footer col-1">
+            <h3>Download Our App</h3>
+            <p>Download App for Android an ios mobile phone.</p>
+            <div class="app-logo">
+            <img src="images/play-store.png">
+                <img src="images/app-store.png">
+            </div>
+            </div>
+            <div class="footer col-2">
+            <img src="images/logo-white.png">
+            <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Acessible to the Many.</p>
+            </div>
+            <div class="footer col-3">
+            <h3>Usefull Links</h3>
+                <ul>
+                <li> Coupons</li>
+                <li> Blog Post</li>
+                <li> Return Policy</li>
+                <li> Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer col-3">
+            <h3>Follow Us</h3>
+                <ul>
+                    <a href="https://www.facebook.com/"><li> Facebook</li></a>
+                    <a href="https://twitter.com/login/"><li> Twitter</li></a>
+                    <a href="https://www.instagram.com/"><li> Instagram</li></a>
+                    <a href="https://www.youtube.com/"><li> YouTube</li></a>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="Copyright">@Copyright2022 - RedStore</p>
+        </div>
+    </div>
+    <!-------------js for toggle menu----------->
+    <script>
+    var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle(){
+            if( MenuItems.style.maxHeight == "0px")
+                {
+                     MenuItems.style.maxHeight = "200px";
+                }
+            else
+            {
+                 MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script> 
+        
+</body>
+</html>
